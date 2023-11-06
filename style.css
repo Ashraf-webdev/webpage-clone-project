@@ -1,0 +1,267 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #ed017f;
+    --secondary-color: #777575;
+}
+
+#hero {
+    height: 100vh;
+    background: url(/Assets/background-image.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:  center;
+}
+
+/* Header */
+
+#hero .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 90px;
+}
+
+.navbar img {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.navbar .navItems {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.navItems li {
+    text-decoration: none;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.navItems li a {
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+
+.navItems li::after {
+    content: "";
+    width: 0;
+    height: 3px;
+    background-color: #ed017f;
+    position: absolute;
+    left: 0;
+    top: 30px;
+}
+
+.navItems li:hover::after {
+    width: 100%;
+    transition: .5s ease-in-out;
+}
+
+.navItems li a:hover {
+    color: var(--primary-color);
+    transition: .3s ease-in-out;
+}
+
+.navbar .rightNav {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.rightNav img {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.rightNav button {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 8px 12px;
+    border: 0;
+    outline: 0;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.rightNav button:hover {
+    animation: scale .5s ease-in-out 1 forwards ;
+    color: #fff;
+}
+
+@keyframes scale {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+    }
+}
+
+/* Main Section */
+
+.main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main .leftMain {
+    width: 50%;
+    padding-left: 90px;
+}
+
+.leftMain .content {
+    width: 80%;
+}
+
+.leftMain .content h1 {
+    font-size: 50px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 600;
+}
+
+.leftMain .content p {
+    padding: 25px 0;
+    color: var(--secondary-color);
+    font-family: 'Poppins', sans-serif;
+}
+
+.leftMain .buttons .btn1 {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 8px 12px;
+    border: 0;
+    outline: 0;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.leftMain .btn1:hover, .leftMain .btn2:hover {
+    animation: scale .5s ease-in-out 1 forwards ;
+    color: #fff;
+}
+
+.leftMain .buttons .btn2 {
+    background-color: transparent;
+    color: var(--primary-color);
+    padding: 8px 12px;
+    border: 2px solid var(--primary-color);
+    outline: 0;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin-left: 8px;
+}
+
+.social {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-top: 100px;
+}
+
+.social .socialLeft {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+    padding-right: 10px;
+    border-right: 2px solid var(--secondary-color);
+}
+
+.socialLeft img {
+    width: 100%;
+    height: 100%;
+}
+
+.socialLeft p {
+    font-family: 'Poppins', sans-serif;
+}
+
+.social .socialRight {
+    padding-left: 10px;
+    display: inline-block;
+}
+
+.socialRight img {
+    padding-right: 8px;
+    cursor: pointer;
+}
+.socialRight img:hover {
+    animation: rotate 2s ease-in-out 1 forwards ;
+}
+
+.main .rightMain {
+    height: 100%;
+    position: relative;
+}
+.rightMain img {
+    width: 100%;
+    height: 100%;
+}
+
+.rightMain .carDiv {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 15px;
+    background-color: #fff;
+    padding: 5px 15px;
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    border-radius: 50px;
+    box-shadow: 0 0 15px 1px var(--secondary-color);
+}
+
+.carDiv p, .houseDiv p {
+    color: var(--secondary-color);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.carDiv img, .houseDiv img {
+    width: 40px;
+}
+
+.rightMain .houseDiv {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 15px;
+    background-color: #fff;
+    padding: 5px 15px;
+    position: absolute;
+    top: 130px;
+    right: 90px;
+    border-radius: 50px;
+    box-shadow: 0 0 15px 1px var(--secondary-color);
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0);
+    }
+    from {
+        transform: rotate(10deg);
+    }
+}
